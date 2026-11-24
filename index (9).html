@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A colorful tour of every HTML element.">
+<meta name="theme-color" content="#1e1b4b">
+<base target="_self">
+<title>The HTML Tag Atlas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Crect width='10' height='10' rx='2' fill='%23ff5a5f'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#1e1b4b;--coral:#ff5a5f;--teal:#0d9488;--sun:#fbbf24;--violet:#7c3aed;--sky:#38bdf8;--paper:#fffdf8;--tint:#f3efff}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.65 Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3,h4,h5,h6,nav,button,summary,th,legend,label,figcaption{font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif}
+a{color:var(--violet);font-weight:600}
+header.top{background:linear-gradient(135deg,#1e1b4b,#7c3aed 55%,#ff5a5f);color:#fff;padding:2.5rem 1.5rem 0}
+header.top hgroup{max-width:960px;margin:auto}
+header.top h1{font-size:clamp(2.2rem,6vw,4rem);margin:.2em 0;line-height:1.05}
+header.top p{margin:0 0 1.5rem;opacity:.9}
+nav{max-width:960px;margin:auto;display:flex;flex-wrap:wrap;gap:.4rem;padding-bottom:1rem}
+nav a{color:#fff;background:#ffffff22;padding:.3rem .8rem;border-radius:99px;text-decoration:none;font-size:.9rem}
+nav a:hover,nav a:focus-visible{background:var(--sun);color:var(--ink)}
+main{max-width:960px;margin:auto;padding:1rem 1.5rem 3rem}
+section{margin:2.5rem 0;padding:1.5rem;border-radius:18px;border-left:10px solid var(--c,var(--violet));background:#fff;box-shadow:0 8px 24px #1e1b4b14}
+section>h2{margin-top:0;color:var(--c,var(--violet))}
+#text{--c:var(--coral)}#lists{--c:var(--teal)}#tables{--c:#d97706}#forms{--c:var(--violet)}#media{--c:#0284c7}#interactive{--c:#db2777}
+code,kbd,samp,pre{font-family:Consolas,Menlo,monospace}
+code{background:var(--tint);padding:.1em .35em;border-radius:4px}
+kbd{background:#fff;border:1px solid #c4b5fd;border-bottom-width:3px;border-radius:5px;padding:.05em .4em}
+pre{background:var(--ink);color:#c7d2fe;padding:1rem;border-radius:12px;overflow-x:auto}
+blockquote{margin:1rem 0;padding:.5rem 1.2rem;border-left:5px solid var(--sun);background:#fffbeb;font-style:italic}
+mark{background:var(--sun);padding:0 .2em}
+hr{border:0;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--coral),var(--sun),var(--teal),var(--sky),var(--violet))}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+caption{font-weight:700;padding:.5rem;text-align:left}
+th,td{padding:.6rem .8rem;border-bottom:1px solid #e5e7eb;text-align:left}
+thead th{background:var(--ink);color:#fff}
+tbody tr:nth-child(even){background:var(--tint)}
+tfoot td{font-weight:700;background:#fef3c7}
+fieldset{border:2px solid #c4b5fd;border-radius:12px;margin:0 0 1rem}
+legend{padding:0 .5rem;font-weight:700;color:var(--violet)}
+label{display:block;margin:.6rem 0 .2rem;font-weight:600}
+input:not([type=checkbox],[type=radio],[type=color],[type=range]),select,textarea{width:100%;padding:.5rem;border:2px solid #ddd6fe;border-radius:8px;font:inherit}
+input[type=color]{width:3rem;height:2rem;border:0;padding:0}
+input:focus,select:focus,textarea:focus,button:focus-visible,summary:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+button{background:linear-gradient(135deg,var(--coral),#f97316);color:#fff;border:0;padding:.6rem 1.2rem;border-radius:10px;font-weight:700;cursor:pointer;margin:.3rem .3rem 0 0}
+button[type=reset]{background:#64748b}
+progress,meter{width:100%;height:1.2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.grid>*{margin:0}
+figure{margin:0;background:var(--tint);border-radius:14px;overflow:hidden}
+figure img,figure video,figure canvas,figure svg{display:block;width:100%;height:auto}
+figcaption{padding:.6rem .9rem;font-size:.9rem}
+details{background:var(--tint);border-radius:12px;padding:.7rem 1rem;margin:.6rem 0}
+summary{cursor:pointer;font-weight:700}
+dialog{border:0;border-radius:16px;padding:1.5rem;box-shadow:0 20px 60px #0006;max-width:420px}
+dialog::backdrop{background:#1e1b4bcc}
+iframe,object,embed{width:100%;border:2px solid #bae6fd;border-radius:12px;background:#fff}
+dt{font-weight:700;color:var(--teal);font-family:"Trebuchet MS",sans-serif}
+dd{margin:0 0 .6rem 1.2rem}
+address{font-style:normal;background:var(--tint);padding:1rem;border-radius:12px}
+aside{background:#ecfeff;border:2px dashed var(--teal);padding:1rem;border-radius:12px}
+footer{background:var(--ink);color:#c7d2fe;text-align:center;padding:2rem 1rem}
+footer a{color:var(--sun)}
+@media(prefers-reduced-motion:no-preference){button{transition:transform .15s}button:hover{transform:translateY(-2px)}}
+@media(max-width:600px){body{font-size:16px}section{padding:1rem}}
+</style>
+</head>
+<body>
+<noscript><p style="background:#fde68a;margin:0;padding:.6rem;text-align:center">JavaScript is off: the live demos below won’t run.</p></noscript>
+
+<header class="top">
+  <hgroup>
+    <p>A guided tour of every element</p>
+    <h1>The HTML Tag Atlas</h1>
+  </hgroup>
+  <nav aria-label="Sections">
+    <a href="#text">Text</a><a href="#lists">Lists</a><a href="#tables">Tables</a>
+    <a href="#forms">Forms</a><a href="#media">Media</a><a href="#interactive">Interactive</a>
+  </nav>
+</header>
+
+<main>
+<search>
+  <form role="search" onsubmit="return false">
+    <label for="q">Search the atlas</label>
+    <input id="q" type="search" placeholder="Try “table”">
+  </form>
+</search>
+
+<article>
+<section id="text">
+  <h2>Text and meaning</h2>
+  <h1 style="font-size:1.9rem;margin:.3rem 0">Heading level 1</h1>
+  <h2 style="font-size:1.6rem;margin:.3rem 0;color:inherit">Heading level 2</h2>
+  <h3>Heading level 3</h3><h4>Heading level 4</h4><h5>Heading level 5</h5><h6>Heading level 6</h6>
+  <p>A paragraph can be <strong>strong</strong>, <b>bold</b>, <em>emphasized</em>, <i>italic</i>, <u>underlined</u>, <s>struck</s>, <mark>highlighted</mark> or <small>small</small>.<br>
+  This line follows a <code>&lt;br&gt;</code>. Chemistry: H<sub>2</sub>O. Math: E = mc<sup>2</sup>.</p>
+  <p>Use <abbr title="HyperText Markup Language">HTML</abbr> for structure, <dfn>CSS</dfn> for style. Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save. Variable <var>x</var> prints <samp>Hello</samp>. Inline code: <code>document.title</code>.</p>
+  <p>Short quote: <q>The web is for everyone.</q> Source: <cite>Web Foundations</cite>. Edited: <del>old</del> <ins>new</ins>. Published <time datetime="2026-11-24">24 November 2026</time>. Price <data value="499">₹499</data>.</p>
+  <p>Ruby: <ruby>漢<rp>(</rp><rt>kan</rt><rp>)</rp></ruby><ruby>字<rp>(</rp><rt>ji</rt><rp>)</rp></ruby>. Bidirectional: <bdi>مرحبا</bdi>, <bdo dir="rtl">override</bdo>. A very long word: super<wbr>cali<wbr>fragilistic.</p>
+  <blockquote cite="https://example.com"><p>Good markup is invisible until you need it.</p></blockquote>
+  <pre><code>&lt;p&gt;Hello, world!&lt;/p&gt;</code></pre>
+  <hr>
+  <address>Written by <a href="mailto:hello@example.com">the Atlas team</a><br>12 Marina Road, Chennai</address>
+</section>
+
+<section id="lists">
+  <h2>Lists</h2>
+  <div class="grid">
+    <div><h3>Unordered</h3><ul><li>Coral</li><li>Teal<ul><li>Dark teal</li></ul></li><li>Sunshine</li></ul></div>
+    <div><h3>Ordered</h3><ol start="1"><li>Write HTML</li><li>Add CSS</li><li>Ship it</li></ol></div>
+    <div><h3>Menu</h3><menu><li><button type="button">Cut</button></li><li><button type="button">Copy</button></li></menu></div>
+  </div>
+  <h3>Description list</h3>
+  <dl><dt>Element</dt><dd>A building block of a page.</dd><dt>Attribute</dt><dd>Extra information on an element.</dd></dl>
+</section>
+
+<section id="tables">
+  <h2>Tables</h2>
+  <div class="table-wrap">
+  <table>
+    <caption>Monthly sales by region</caption>
+    <colgroup><col><col style="background:#fff7ed"><col></colgroup>
+    <thead><tr><th scope="col">Region</th><th scope="col">Units</th><th scope="col">Revenue</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">South</th><td>1,240</td><td>₹6.2L</td></tr>
+      <tr><th scope="row">West</th><td>980</td><td>₹4.9L</td></tr>
+      <tr><th scope="row">North</th><td>1,105</td><td>₹5.5L</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total</td><td>3,325</td><td>₹16.6L</td></tr></tfoot>
+  </table>
+  </div>
+</section>
+
+<section id="forms">
+  <h2>Forms</h2>
+  <form action="#" method="get">
+    <fieldset>
+      <legend>About you</legend>
+      <label for="name">Name</label><input id="name" name="name" type="text" placeholder="Asha Raman" required>
+      <label for="mail">Email</label><input id="mail" name="mail" type="email" placeholder="asha@example.com">
+      <label for="pw">Password</label><input id="pw" type="password" minlength="8">
+      <label for="dob">Date</label><input id="dob" type="date">
+      <label for="tm">Time</label><input id="tm" type="time">
+      <label for="num">Number</label><input id="num" type="number" min="0" max="10" value="3">
+      <label for="col">Favorite color</label><input id="col" type="color" value="#ff5a5f">
+      <label for="rng">Volume</label><input id="rng" type="range" value="60">
+      <label for="up">File</label><input id="up" type="file">
+      <label for="web">Website</label><input id="web" type="url" placeholder="https://">
+      <label for="tel">Phone</label><input id="tel" type="tel">
+    </fieldset>
+    <fieldset>
+      <legend>Preferences</legend>
+      <label for="city">City</label>
+      <input id="city" list="cities" placeholder="Pick or type">
+      <datalist id="cities"><option value="Chennai"><option value="Mumbai"><option value="Delhi"></datalist>
+      <label for="lang">Language</label>
+      <select id="lang">
+        <optgroup label="Indian"><option>Tamil</option><option>Hindi</option></optgroup>
+        <optgroup label="Global"><option>English</option><option>French</option></optgroup>
+      </select>
+      <label><input type="checkbox" checked> Email me updates</label>
+      <label><input type="radio" name="plan" checked> Free</label>
+      <label><input type="radio" name="plan"> Pro</label>
+      <label for="msg">Message</label><textarea id="msg" rows="3"></textarea>
+    </fieldset>
+    <label for="p">Upload progress</label><progress id="p" value="70" max="100">70%</progress>
+    <label for="m">Battery</label><meter id="m" min="0" max="100" low="30" high="70" optimum="90" value="82">82%</meter>
+    <p>Result: <output name="r">—</output></p>
+    <button type="submit">Send</button><button type="reset">Reset</button><button type="button" id="calc">Calculate</button>
+    <input type="image" alt="Submit with image" width="1" height="1" style="width:1px;height:1px;border:0;padding:0" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
+  </form>
+</section>
+
+<section id="media">
+  <h2>Images and media</h2>
+  <div class="grid">
+    <figure>
+      <picture>
+        <source media="(min-width:700px)" srcset="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff5a5f'/%3E%3Cstop offset='.6' stop-color='%23fbbf24'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='240' fill='url(%23s)'/%3E%3Ccircle cx='200' cy='150' r='50' fill='%23fff7ed'/%3E%3Cpath d='M0 170 L90 110 L170 165 L260 90 L400 175 V240 H0Z' fill='%231e1b4b'/%3E%3C/svg%3E">
+        <img alt="Sunset behind dark mountains" width="400" height="240" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Crect width='400' height='240' fill='%23fb923c'/%3E%3Ccircle cx='200' cy='150' r='50' fill='%23fff7ed'/%3E%3Cpath d='M0 170 L90 110 L170 165 L260 90 L400 175 V240 H0Z' fill='%231e1b4b'/%3E%3C/svg%3E">
+      </picture>
+      <figcaption>picture, source, img, figure and figcaption</figcaption>
+    </figure>
+    <figure>
+      <svg viewBox="0 0 400 240" role="img" aria-label="Colorful bar chart">
+        <rect width="400" height="240" fill="#ecfeff"/>
+        <rect x="40" y="120" width="50" height="100" rx="6" fill="#ff5a5f"/>
+        <rect x="115" y="70" width="50" height="150" rx="6" fill="#fbbf24"/>
+        <rect x="190" y="95" width="50" height="125" rx="6" fill="#0d9488"/>
+        <rect x="265" y="40" width="50" height="180" rx="6" fill="#7c3aed"/>
+      </svg>
+      <figcaption>Inline svg</figcaption>
+    </figure>
+    <figure>
+      <canvas id="cv" width="400" height="240">Canvas not supported.</canvas>
+      <figcaption>canvas, drawn by script</figcaption>
+    </figure>
+  </div>
+  <h3>Image map</h3>
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='100'%3E%3Crect width='150' height='100' fill='%2338bdf8'/%3E%3Crect x='150' width='150' height='100' fill='%23f472b6'/%3E%3C/svg%3E" width="300" height="100" usemap="#mp" alt="Two clickable color blocks">
+  <map name="mp"><area shape="rect" coords="0,0,150,100" href="#text" alt="Go to text"><area shape="rect" coords="150,0,300,100" href="#forms" alt="Go to forms"></map>
+  <h3>Audio and video</h3>
+  <div class="grid">
+    <audio controls preload="none"><source src="sound.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
+    <video controls preload="none" width="300" height="160" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='160'%3E%3Crect width='300' height='160' fill='%231e1b4b'/%3E%3Cpath d='M120 50 L190 80 L120 110Z' fill='%23fbbf24'/%3E%3C/svg%3E">
+      <source src="clip.mp4" type="video/mp4"><track kind="captions" src="captions.vtt" srclang="en" label="English">Your browser does not support video.
+    </video>
+  </div>
+  <h3>Embedded content</h3>
+  <iframe title="Inline frame" height="90" srcdoc="<body style='font-family:sans-serif;background:#f0f9ff;color:#0369a1;margin:1rem'>Hello from an <b>iframe</b>!</body>"></iframe>
+  <object data="missing.svg" type="image/svg+xml" height="50"><p>Fallback inside <code>&lt;object&gt;</code>.</p></object>
+  <embed src="missing.pdf" type="application/pdf" height="40">
+</section>
+
+<section id="interactive">
+  <h2>Interactive and structural</h2>
+  <details open><summary>What is a details element?</summary><p>It reveals extra content when clicked, no JavaScript needed.</p></details>
+  <details><summary>Which elements structure a page?</summary><p><code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>aside</code>, <code>footer</code>.</p></details>
+  <button type="button" id="open">Open dialog</button>
+  <dialog id="dlg">
+    <h3>Hello!</h3><p>This is a native <code>&lt;dialog&gt;</code>.</p>
+    <form method="dialog"><button>Close</button></form>
+  </dialog>
+  <p>Template output: <span id="tpl-out"></span></p>
+  <template id="tpl"><strong style="color:#db2777">Cloned from a template ✨</strong></template>
+  <aside><h3>Did you know?</h3><p>Elements like <code>&lt;slot&gt;</code> live inside shadow DOM: <span id="host"></span></p></aside>
+  <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem">
+    <span style="background:#ff5a5f;color:#fff;padding:.3rem .8rem;border-radius:99px">span</span>
+    <span style="background:#0d9488;color:#fff;padding:.3rem .8rem;border-radius:99px">div</span>
+    <span style="background:#7c3aed;color:#fff;padding:.3rem .8rem;border-radius:99px">generic</span>
+  </div>
+</section>
+</article>
+</main>
+
+<footer>
+  <p>Built with every tag we could fit. <a href="#top-of-page" onclick="scrollTo(0,0);return false">Back to top</a></p>
+  <p><small>© 2026 The HTML Tag Atlas</small></p>
+</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('cv').getContext('2d');
+  var g=c.createLinearGradient(0,0,400,240);
+  g.addColorStop(0,'#38bdf8');g.addColorStop(1,'#7c3aed');
+  c.fillStyle=g;c.fillRect(0,0,400,240);
+  ['#fbbf24','#ff5a5f','#14b8a6','#fff'].forEach(function(col,i){
+    c.fillStyle=col;c.beginPath();c.arc(70+i*85,120,32,0,6.283);c.fill();
+  });
+  var dlg=document.getElementById('dlg');
+  document.getElementById('open').onclick=function(){dlg.showModal()};
+  document.getElementById('calc').onclick=function(){
+    document.querySelector('output').value=document.getElementById('num').value*7;
+  };
+  document.getElementById('tpl-out').appendChild(document.getElementById('tpl').content.cloneNode(true));
+  var host=document.getElementById('host'),sr=host.attachShadow({mode:'open'});
+  sr.innerHTML='<style>b{color:#0d9488}</style><b><slot>fallback text</slot></b>';
+  host.insertAdjacentHTML('beforeend','<span slot="x">slotted content</span>');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+cchref="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap">
+<style>
+:root{--ink:#1d1b3a;--mango:#ffb000;--hib:#e8366b;--teal:#00a896;--lime:#b6e03a;--sky:#5ec2ff;--plum:#6a2c91;--paper:#fffdf7;
+--d:"Bricolage Grotesque",system-ui,sans-serif;--s:"Source Serif 4",Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:1.05rem/1.65 var(--s);color:var(--ink);background:var(--paper)}
+h1,h2,h3,h4,h5,h6,button,summary,th,nav{font-family:var(--d)}
+a{color:var(--hib);font-weight:700}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.w{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+section{padding:4rem 0}
+.band-mango{background:var(--mango)}.band-teal{background:var(--teal);color:#fff}.band-ink{background:var(--ink);color:#fff}
+.band-hib{background:var(--hib);color:#fff}.band-sky{background:var(--sky)}.band-lime{background:var(--lime)}.band-plum{background:var(--plum);color:#fff}
+.band-teal a,.band-ink a,.band-hib a,.band-plum a{color:var(--mango)}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 1rem;line-height:1.1;letter-spacing:-.02em}
+.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.card{background:#fff;color:var(--ink);padding:1.25rem;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);border-radius:.25rem}
+.scroll{overflow-x:auto}
+header.top{background:var(--ink);color:#fff;position:sticky;top:0;z-index:5}
+header.top .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;padding-block:.75rem}
+header.top p{margin:0;font:800 1.3rem var(--d)}
+nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none}nav a:hover{color:var(--mango)}
+.hero{background:linear-gradient(120deg,var(--hib),var(--mango) 60%,var(--lime));padding:5rem 0 4rem}
+.hero h1{font-size:clamp(2.6rem,9vw,6.5rem);line-height:.95;margin:0;letter-spacing:-.04em;font-weight:800}
+.hero p{font-size:1.3rem;max-width:34rem}
+.hero hgroup p{margin:.5rem 0 0}
+button,.btn{font-weight:800;padding:.7rem 1.2rem;border:3px solid var(--ink);background:var(--mango);color:var(--ink);cursor:pointer;border-radius:.25rem;box-shadow:3px 3px 0 var(--ink)}
+button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+table{border-collapse:collapse;width:100%;background:#fff;color:var(--ink)}
+caption{font:800 1.1rem var(--d);text-align:left;padding:.5rem 0;color:inherit}
+th,td{padding:.6rem .8rem;border:2px solid var(--ink);text-align:left}
+thead{background:var(--plum);color:#fff}tfoot{background:var(--lime);font-weight:700}
+tbody tr:nth-child(even){background:#fff3d6}
+fieldset{border:3px solid var(--ink);border-radius:.25rem;background:#fff;color:var(--ink);margin:0 0 1rem}
+legend{font:800 1rem var(--d);background:var(--mango);padding:.1rem .6rem;border:2px solid var(--ink)}
+label{display:block;font-weight:700;margin:.6rem 0 .2rem;font-family:var(--d)}
+input,select,textarea{font:inherit;padding:.5rem;border:2px solid var(--ink);border-radius:.25rem;width:100%;max-width:100%;background:#fff;color:var(--ink)}
+input[type=checkbox],input[type=radio],input[type=range],input[type=color]{width:auto}
+input[type=color]{height:2.4rem;padding:0}
+pre{background:#0f0e24;color:var(--lime);padding:1rem;overflow-x:auto;border-radius:.25rem;border-left:8px solid var(--hib)}
+code,samp,kbd,var{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em}
+kbd{background:#fff;color:var(--ink);border:2px solid var(--ink);border-bottom-width:4px;padding:0 .35rem;border-radius:.25rem}
+samp{background:var(--ink);color:var(--sky);padding:0 .3rem}
+code{background:rgba(255,255,255,.55);color:var(--ink);padding:0 .3rem}
+mark{background:var(--sky);padding:0 .2rem}
+blockquote{margin:1rem 0;padding:.5rem 1.2rem;border-left:8px solid var(--mango);font-style:italic;font-size:1.2rem}
+progress,meter{width:100%;height:1.4rem}
+details{background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:.25rem;padding:.6rem 1rem;margin-bottom:.75rem}
+summary{cursor:pointer;font-weight:800}
+dialog{border:4px solid var(--ink);border-radius:.5rem;padding:1.5rem;max-width:26rem;box-shadow:10px 10px 0 var(--hib)}
+dialog::backdrop{background:rgba(29,27,58,.7)}
+figure{margin:0}figcaption{font-size:.9rem;padding-top:.4rem}
+img,video,canvas,svg,iframe,embed,object{max-width:100%}
+video,audio,iframe,canvas{border:3px solid var(--ink);border-radius:.25rem;background:#000;display:block}
+audio{width:100%;background:#fff}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.4rem 1.2rem}
+dt{font:800 1rem var(--d)}dd{margin:0}
+footer.bot{background:var(--ink);color:#fff;padding:3rem 0 2rem}
+footer small{opacity:.85}
+.tag{display:inline-block;background:var(--ink);color:var(--mango);padding:0 .5rem;border-radius:2rem;font:700 .8rem var(--d)}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem;z-index:9}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var d=document.getElementById("bagDialog"),o=document.getElementById("openDlg");
+  if(o&&d.showModal){o.addEventListener("click",function(){d.showModal()})}
+  var r=document.getElementById("grind"),out=document.getElementById("grindOut");
+  var names=["Turkish","Espresso","Moka pot","South Indian filter","Pour-over","French press","Cold brew"];
+  function upd(){out.value=names[r.value-1]}r.addEventListener("input",upd);upd();
+  var c=document.getElementById("beans").getContext("2d");
+  var cols=["#e8366b","#ffb000","#00a896","#5ec2ff","#b6e03a","#6a2c91"];
+  for(var i=0;i<6;i++){c.fillStyle=cols[i];c.beginPath();c.ellipse(30+i*45,50,18,28,i*.4,0,7);c.fill();
+  c.strokeStyle="#1d1b3a";c.lineWidth=3;c.beginPath();c.moveTo(18+i*45,70);c.quadraticCurveTo(30+i*45,40,42+i*45,30);c.stroke()}
+  var t=document.getElementById("tpl"),host=document.getElementById("tplHost");
+  if(t&&host){host.appendChild(t.content.cloneNode(true))}
+});
+</script>
+<noscript><style>.needs-js{display:none}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="top">
+ <div class="w">
+  <p>Kaapi Lane <span style="color:var(--mango)">Roasters</span></p>
+  <nav aria-label="Primary">
+   <ul>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#brew">Brew guide</a></li>
+    <li><a href="#media">Media</a></li>
+    <li><a href="#visit">Visit</a></li>
+    <li><a href="#contact">Contact</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+ <div class="w">
+  <hgroup>
+   <h1>Roasted on the lane,<br>poured by dawn.</h1>
+   <p>Small-batch coffee from the hills of Coorg and Chikmagalur, roasted every Tuesday and Friday in Mylapore, Chennai.</p>
+  </hgroup>
+  <p><a class="btn" href="#shop" style="text-decoration:none">Shop this week&rsquo;s beans</a></p>
+  <search>
+   <form action="#shop" method="get" role="search">
+    <label for="q">Search our beans</label>
+    <input id="q" name="q" type="search" placeholder="Try &ldquo;chicory&rdquo; or &ldquo;washed&rdquo;" style="max-width:24rem">
+   </form>
+  </search>
+ </div>
+</section>
+
+<section class="band-ink" id="story">
+ <div class="w">
+  <article>
+   <header>
+    <h2>Our story</h2>
+    <p>By <address style="display:inline"><a href="mailto:meena@kaapilane.example">Meena Raghavan</a>, founder</address> &middot; Published <time datetime="2026-11-03">3 November 2026</time></p>
+   </header>
+   <p>We started in a <b>ten-square-metre</b> shed behind a <i>filter coffee</i> stall, with a second-hand drum roaster and a stubborn idea: South Indian beans deserve to be tasted <em>on their own</em>, not buried under chicory. Today we buy directly from <strong>14 estates</strong>, and every bag carries the harvest date.</p>
+   <p>Our house blend is <s>Rs 650</s> now Rs 520 for 250 g<sup>*</sup>. Chemistry of a good cup: H<sub>2</sub>O at 93&nbsp;&deg;C, about 18&nbsp;g of coffee per 300&nbsp;ml. <small>*Price valid until stock lasts. GST included.</small></p>
+   <p>Roast notes: <mark>jaggery, orange peel, dark chocolate</mark>. Judges at the <abbr title="Coffee Quality Institute">CQI</abbr> table scored our Coorg lot <data value="86.5">86.5 points</data>. As our head roaster says, <q>the bean tells you when it&rsquo;s ready</q>.</p>
+   <blockquote>
+    <p>The first sip tasted like my grandmother&rsquo;s kitchen at 6 a.m.</p>
+    <footer>&mdash; <cite>A customer in Adyar</cite></footer>
+   </blockquote>
+   <p>In coffee, a <dfn>cupping</dfn> is a structured tasting where roasted samples are brewed side by side. The Japanese word for coffee is <ruby>珈琲<rp>(</rp><rt>k&#333;h&#299;</rt><rp>)</rp></ruby>. Our Arabic-reading customers see <bdi>قهوة</bdi> on the door, and we occasionally print <bdo dir="rtl">backwards</bdo> labels for fun. This <u>underlined</u> text marks a misspelling-check: &ldquo;recieve&rdquo;.</p>
+   <p>Update: <del datetime="2026-11-10">Closed on Mondays.</del> <ins datetime="2026-11-10">Open all seven days from 7 a.m.</ins></p>
+   <p>Long URL?<wbr>Break<wbr>it<wbr>anywhere.<br>New line using a <code>&lt;br&gt;</code> tag.</p>
+   <hr>
+   <p>Press <kbd>Ctrl</kbd> + <kbd>P</kbd> to print our menu. Variable <var>g</var> is grams; the grinder shows <samp>Ready: 18.0 g</samp> when done.</p>
+   <pre><code>const dose = 18;      // grams
+const water = dose * 16.6; // ml
+console.log(`Pour ${water.toFixed(0)} ml`);</code></pre>
+  </article>
+ </div>
+</section>
+
+<section class="band-mango" id="shop">
+ <div class="w">
+  <h2>This week&rsquo;s beans</h2>
+  <div class="grid">
+   <figure class="card">
+    <picture>
+     <source media="(min-width:700px)" srcset="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='400' height='240' fill='%23e8366b'/%3E%3Ccircle cx='200' cy='120' r='80' fill='%23ffb000'/%3E%3C/svg%3E">
+     <img alt="Illustrated bag of Coorg Sunrise coffee beans" width="400" height="240" style="width:100%;height:auto" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='180'%3E%3Crect width='300' height='180' fill='%23e8366b'/%3E%3Ccircle cx='150' cy='90' r='60' fill='%23ffb000'/%3E%3C/svg%3E">
+    </picture>
+    <figcaption><strong>Coorg Sunrise</strong> &middot; washed Arabica &middot; Rs 520</figcaption>
+   </figure>
+   <figure class="card">
+    <img alt="Illustrated bag of Chikmagalur Monsoon beans" width="300" height="180" style="width:100%;height:auto" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='180'%3E%3Crect width='300' height='180' fill='%2300a896'/%3E%3Crect x='80' y='40' width='140' height='100' rx='20' fill='%23b6e03a'/%3E%3C/svg%3E">
+    <figcaption><strong>Monsoon Malabar</strong> &middot; monsooned Robusta &middot; Rs 480</figcaption>
+   </figure>
+   <aside class="card" style="background:var(--plum);color:#fff">
+    <h3>Subscribe &amp; save 10%</h3>
+    <p>A fresh bag every fortnight. Pause or cancel anytime.</p>
+    <p><span class="tag">New</span> <span class="tag">Chennai delivery</span></p>
+   </aside>
+  </div>
+
+  <div class="scroll" style="margin-top:2rem">
+   <table>
+    <caption>Compare roasts</caption>
+    <colgroup><col><col style="background:#fff3d6"><col><col></colgroup>
+    <thead><tr><th scope="col">Beans</th><th scope="col">Roast</th><th scope="col">Best for</th><th scope="col">250 g</th></tr></thead>
+    <tbody>
+     <tr><th scope="row">Coorg Sunrise</th><td>Medium</td><td>Pour-over</td><td>Rs 520</td></tr>
+     <tr><th scope="row">Monsoon Malabar</th><td>Medium-dark</td><td>Filter coffee</td><td>Rs 480</td></tr>
+     <tr><th scope="row">Lane Espresso</th><td>Dark</td><td>Espresso, moka</td><td>Rs 560</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="3">Free delivery in Chennai above</td><td>Rs 999</td></tr></tfoot>
+   </table>
+  </div>
+ </div>
+</section>
+
+<section class="band-teal" id="brew">
+ <div class="w">
+  <h2>Brew guide</h2>
+  <div class="grid">
+   <div>
+    <h3>South Indian filter</h3>
+    <ol>
+     <li>Add 3 tbsp medium-fine grounds to the upper chamber.</li>
+     <li>Pour 200 ml of water just off the boil.</li>
+     <li>Wait 12 minutes for the decoction to drip.</li>
+     <li>Mix with hot milk and sugar to taste.</li>
+    </ol>
+    <h4>You will need</h4>
+    <ul>
+     <li>A steel filter set</li>
+     <li>Fresh whole beans</li>
+     <li>A <menu style="display:inline;padding:0"><li style="display:inline;list-style:none">kettle</li></menu> (or any pot)</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Glossary</h3>
+    <dl>
+     <dt>Bloom</dt><dd>The first pour that lets gas escape.</dd>
+     <dt>Decoction</dt><dd>Concentrated coffee brewed before adding milk.</dd>
+     <dt>Crema</dt><dd>The golden foam on a fresh espresso.</dd>
+    </dl>
+    <h5>Not sure where to start?</h5>
+    <h6>Ask us at the counter, we love questions.</h6>
+   </div>
+  </div>
+  <details open>
+   <summary>Why does my coffee taste bitter?</summary>
+   <p>Usually the grind is too fine or the water too hot. Try a coarser grind first.</p>
+  </details>
+  <details>
+   <summary>How long do beans stay fresh?</summary>
+   <p>Best within four weeks of the roast date, stored airtight away from light.</p>
+  </details>
+ </div>
+</section>
+
+<section class="band-sky" id="media">
+ <div class="w">
+  <h2>See and hear the roast</h2>
+  <div class="grid">
+   <figure>
+    <canvas id="beans" width="300" height="100" aria-label="Six colourful coffee beans">Your browser can&rsquo;t draw our beans.</canvas>
+    <figcaption>Canvas: a row of beans</figcaption>
+   </figure>
+   <figure>
+    <svg viewBox="0 0 300 100" width="300" height="100" role="img" aria-labelledby="svgT" style="background:#fff;border:3px solid #1d1b3a">
+     <title id="svgT">Steaming cup</title>
+     <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#e8366b"/><stop offset="1" stop-color="#ffb000"/></linearGradient></defs>
+     <rect x="100" y="40" width="80" height="50" rx="10" fill="url(#g)" stroke="#1d1b3a" stroke-width="3"/>
+     <path d="M185 52h18a12 12 0 010 24h-18" fill="none" stroke="#1d1b3a" stroke-width="3"/>
+     <path d="M120 30q-8-12 0-22M145 30q-8-12 0-22M165 30q-8-12 0-22" fill="none" stroke="#6a2c91" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <figcaption>SVG: a cup with steam</figcaption>
+   </figure>
+   <figure>
+    <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+     <mrow><mi>ratio</mi><mo>=</mo><mfrac><mrow><mi>water</mi></mrow><mrow><mi>coffee</mi></mrow></mfrac><mo>&asymp;</mo><mn>16.6</mn></mrow>
+    </math>
+    <figcaption>MathML: our brew ratio</figcaption>
+   </figure>
+  </div>
+
+  <h3>Video &amp; audio</h3>
+  <div class="grid">
+   <figure>
+    <video controls width="400" preload="none" muted playsinline>
+     <source src="roasting.mp4" type="video/mp4">
+     <source src="roasting.webm" type="video/webm">
+     <track kind="captions" src="roasting.vtt" srclang="en" label="English" default>
+     Your browser doesn&rsquo;t support video.
+    </video>
+    <figcaption>Video: first crack in the drum (add roasting.mp4 next to this file)</figcaption>
+   </figure>
+   <figure>
+    <audio controls preload="none"><source src="crackle.mp3" type="audio/mpeg">Audio isn&rsquo;t supported.</audio>
+    <figcaption>Audio: the sound of first crack</figcaption>
+   </figure>
+   <figure>
+    <iframe title="Our menu preview" width="400" height="140" sandbox srcdoc="<body style='font:16px sans-serif;background:#b6e03a;margin:12px'><b>Today&rsquo;s special</b><br>Cardamom cold brew &middot; Rs 190</body>"></iframe>
+    <figcaption>Iframe: embedded special</figcaption>
+   </figure>
+   <figure>
+    <object data="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='80'%3E%3Crect width='200' height='80' fill='%236a2c91'/%3E%3Ctext x='20' y='48' fill='white' font-size='20'%3EObject tag%3C/text%3E%3C/svg%3E" type="image/svg+xml" width="200" height="80">Object fallback</object>
+    <embed src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='80'%3E%3Crect width='200' height='80' fill='%23e8366b'/%3E%3Ctext x='20' y='48' fill='white' font-size='20'%3EEmbed tag%3C/text%3E%3C/svg%3E" type="image/svg+xml" width="200" height="80">
+    <figcaption>Object and embed</figcaption>
+   </figure>
+  </div>
+
+  <h3>Where to find us</h3>
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Crect width='400' height='200' fill='%23fffdf7'/%3E%3Cpath d='M0 120h400M200 0v200' stroke='%2300a896' stroke-width='12'/%3E%3Ccircle cx='110' cy='60' r='24' fill='%23e8366b'/%3E%3Crect x='250' y='130' width='80' height='50' fill='%23ffb000'/%3E%3C/svg%3E" width="400" height="200" usemap="#lane" alt="Simple map: click the pink dot for the roastery or the yellow block for the cafe" style="border:3px solid #1d1b3a;height:auto">
+  <map name="lane">
+   <area shape="circle" coords="110,60,24" href="#visit" alt="Roastery">
+   <area shape="rect" coords="250,130,330,180" href="#contact" alt="Cafe">
+  </map>
+ </div>
+</section>
+
+<section class="band-lime" id="visit">
+ <div class="w">
+  <h2>Visit the roastery</h2>
+  <address>
+   Kaapi Lane Roasters<br>
+   14, Kutchery Road, Mylapore<br>
+   Chennai, Tamil Nadu 600004<br>
+   <a href="tel:+914400000000" style="color:var(--hib)">+91 44 0000 0000</a>
+  </address>
+  <p>Open daily, <time datetime="07:00">7:00 a.m.</time> to <time datetime="22:00">10:00 p.m.</time> Next roast: <time datetime="2026-11-27T06:30">Friday 27 Nov, 6:30 a.m.</time></p>
+  <h3>Today&rsquo;s status</h3>
+  <p><label for="stock" style="display:inline">Beans left in the Coorg lot:</label></p>
+  <progress id="stock" max="100" value="64">64%</progress>
+  <p><label for="temp" style="display:inline">Drum temperature:</label></p>
+  <meter id="temp" min="150" max="250" low="170" high="225" optimum="205" value="198">198&deg;C</meter>
+ </div>
+</section>
+
+<section class="band-hib" id="contact">
+ <div class="w">
+  <h2>Order a bag or ask a question</h2>
+  <form action="#" method="post" onsubmit="event.preventDefault();document.getElementById('res').value='Thanks! We will reply within a day.'">
+   <fieldset>
+    <legend>Your details</legend>
+    <label for="name">Full name</label>
+    <input id="name" name="name" type="text" autocomplete="name" required placeholder="Priya Subramanian">
+    <label for="em">Email</label>
+    <input id="em" name="email" type="email" autocomplete="email" required>
+    <label for="ph">Phone</label>
+    <input id="ph" name="phone" type="tel" placeholder="+91 98765 43210">
+    <label for="dt">Preferred delivery date</label>
+    <input id="dt" name="date" type="date">
+    <label for="tm">Delivery time</label>
+    <input id="tm" name="time" type="time">
+    <label for="pw">Account password</label>
+    <input id="pw" name="password" type="password" autocomplete="new-password" minlength="8">
+    <label for="web">Website</label>
+    <input id="web" name="site" type="url" placeholder="https://">
+   </fieldset>
+   <fieldset>
+    <legend>Your order</legend>
+    <label for="bean">Beans</label>
+    <select id="bean" name="bean">
+     <optgroup label="Arabica">
+      <option>Coorg Sunrise</option>
+      <option selected>Chikmagalur Honey</option>
+     </optgroup>
+     <optgroup label="Robusta">
+      <option>Monsoon Malabar</option>
+     </optgroup>
+    </select>
+    <label for="size">Bag size</label>
+    <input id="size" name="size" list="sizes" placeholder="250 g">
+    <datalist id="sizes"><option value="100 g"><option value="250 g"><option value="500 g"><option value="1 kg"></datalist>
+    <label for="qty">Quantity</label>
+    <input id="qty" name="qty" type="number" min="1" max="12" value="2">
+    <label for="grind">Grind</label>
+    <input id="grind" name="grind" type="range" min="1" max="7" value="4" style="width:100%"> 
+    <p>Selected: <output id="grindOut" for="grind"></output></p>
+    <p>Roast level:</p>
+    <label style="display:inline"><input type="radio" name="roast" value="m" checked> Medium</label>
+    <label style="display:inline"><input type="radio" name="roast" value="d"> Dark</label>
+    <p>Extras:</p>
+    <label style="display:inline"><input type="checkbox" name="x" value="gift"> Gift wrap</label>
+    <label style="display:inline"><input type="checkbox" name="x" value="note" checked> Handwritten note</label>
+    <label for="col">Label colour</label>
+    <input id="col" name="colour" type="color" value="#ffb000">
+    <label for="up">Logo for custom labels</label>
+    <input id="up" name="logo" type="file" accept="image/*">
+    <input type="hidden" name="source" value="homepage">
+    <label for="msg">Message</label>
+    <textarea id="msg" name="msg" rows="4" placeholder="Allergies, gate code, anything else"></textarea>
+   </fieldset>
+   <button type="submit">Place order</button>
+   <button type="reset" style="background:#fff">Clear form</button>
+   <button type="button" id="openDlg" style="background:var(--sky)">Gift options</button>
+   <p><output id="res" for="name em"></output></p>
+  </form>
+
+  <dialog id="bagDialog">
+   <form method="dialog">
+    <h3>Gift options</h3>
+    <p>Add a recycled kraft box and a recipe card for Rs 60.</p>
+    <button value="ok">Got it</button>
+   </form>
+  </dialog>
+
+  <div id="tplHost"></div>
+  <template id="tpl">
+   <p class="card" style="background:var(--mango);color:var(--ink)">Template content: <slot name="tip">Free shipping on your first subscription box.</slot></p>
+  </template>
+  <p class="needs-js">Gift options and the grind label need JavaScript.</p>
+ </div>
+</section>
+
+<section class="band-plum">
+ <div class="w">
+  <h2>Reading list</h2>
+  <p>Sources we like:
+   <a href="https://www.coffeeboardindia.org" rel="noopener noreferrer" target="_blank">Coffee Board of India</a>,
+   <a href="#top">back to top</a>, and our <a href="menu.pdf" download>printable menu</a>.</p>
+  <p>The <button type="button" style="font-size:.9rem">Copy discount code</button> button copies <code>LANE10</code>.</p>
+ </div>
+</section>
+
+</main>
+
+<footer class="bot">
+ <div class="w">
+  <p><small>&copy; 2026 Kaapi Lane Roasters. Brewed in Chennai. All rights reserved.</small></p>
+  <p><small>Drink responsibly: caffeine content is about 95&nbsp;mg per cup.</small></p>
+ </div>
+</footer>
+</body>
+</html>
